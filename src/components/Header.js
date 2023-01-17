@@ -6,7 +6,7 @@ function Header() {
     <header>
    <h1>🌬️Weather   forecast</h1>
    
-  <a  href="https://github.com/Shyam-Sundar-Reddy/Weather-App-REACT.git">
+  <a  href="https://github.com/Shyam-Sundar-Reddy/REACT-Web-WeatherApp">
   <h2> View Code</h2> </a>
   
    
