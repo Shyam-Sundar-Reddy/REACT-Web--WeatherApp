@@ -4,9 +4,13 @@ import React from "react";
 function Header() {
   return (
     <header>
-   <h1>Open weather</h1>
+   <h1>🌬️Weather   forecast</h1>
+   
+  <a  href="">
+  <h2> View Code</h2> </a>
   
-    </header>
+   
+  </header>
   );
 }
 
