@@ -2,41 +2,38 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Icon } from '@iconify/react';
+ 
 
 function Weather() {
   const [name, setName] = useState("");
-  const [cityName, setHeading] = useState("");
+  const [cityName, setCityName] = useState("");
   const [weatherData, setWeatherData] = useState({});
 
   function handleChange(event) {
     console.log(event.target.value);
     setName(event.target.value);
   }
+   
 
   function handleClick(event) {
-    setHeading(name);
+    setCityName(name);
 
     event.preventDefault();
   }
 
   const getWeatherData = async () => {
     const unit = "metric";
-    const Key = "78f82a225ffaf340ffce8e0bbc3decd3";
+     const Key="78f82a225ffaf340ffce8e0bbc3decd3";
     const city = cityName;
 
     const response = await axios.get(
-      "https://api.openweathermap.org/data/2.5/weather?q=" +
-        city +
-        "&appid=" +
-        Key +
-        "&units=" +
-        unit
-    );
+      "https://api.openweathermap.org/data/2.5/weather?q=" + city +"&appid=" +Key+ "&units=" + unit);
     setWeatherData(response.data);
   };
 
   useEffect(() => {
     getWeatherData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cityName]);
 
   let img;
